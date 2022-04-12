@@ -1,0 +1,240 @@
+{
+	"info": {
+		"_postman_id": "aa76d1df-72b1-4345-bc44-6f9d1c7b64bf",
+		"name": "kledo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "setting-patch",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "code",
+							"value": "overtime_methodss",
+							"type": "text"
+						},
+						{
+							"key": "value",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/settings/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"settings",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employee-store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Satria",
+							"type": "text"
+						},
+						{
+							"key": "status_id",
+							"value": "3",
+							"type": "text"
+						},
+						{
+							"key": "salary",
+							"value": "10000000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employees",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "overtime-store",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "employee_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "date",
+							"value": "2022-03-16",
+							"type": "text"
+						},
+						{
+							"key": "time_started",
+							"value": "20:00",
+							"type": "text"
+						},
+						{
+							"key": "time_ended",
+							"value": "23:35",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/overtimes",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"overtimes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "employee-index",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/employees",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "overtime-index",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/overtimes?date_started=14-03-2022&date_ended=17-03-2022",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"overtimes"
+					],
+					"query": [
+						{
+							"key": "date_started",
+							"value": "14-03-2022"
+						},
+						{
+							"key": "date_ended",
+							"value": "17-03-2022"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "overtime-calculate",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/overtime-pays/calculate",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"overtime-pays",
+						"calculate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
